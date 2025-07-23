@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24hrComedy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #000;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      padding: 0;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 60px 30px 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      width: 100%;
+      margin: 80px auto 40px;
+      text-align: center;
+      box-shadow: 0 0 20px #a73eff88;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: #bf69f9;
+      text-shadow: 0 0 8px #a73eff, 0 0 20px #7b00ff;
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-top: 30px;
+    }
+    .highlight {
+      color: #bf69f9;
+      text-shadow: 0 0 4px #a73eff, 0 0 8px #7b00ff;
+      font-weight: bold;
+    }
+    .scroll-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #bf69f9;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #a73eff, 0 0 20px #7b00ff;
+      transition: background-color 0.3s;
+    }
+    .scroll-btn:hover {
+      background-color: #a73eff;
+    }
+    .daily-drop {
+      background-color: #0a0a0a;
+      padding: 80px 30px;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+    .daily-drop h2 {
+      font-size: 2.5rem;
+      color: #bf69f9;
+      text-shadow: 0 0 6px #a73eff, 0 0 14px #7b00ff;
+      margin-bottom: 30px;
+    }
+    .quote {
+      font-size: 1.3rem;
+      color: #eee;
+      font-style: italic;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .meme {
+      max-width: 100%;
+      width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #6d00b5;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      p { font-size: 1rem; }
+      .daily-drop h2 { font-size: 2rem; }
+      .quote { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>COMEDY NEVER SLEEPS.</h1>
+    <p>
+      Fresh drops every <span class="highlight">hour</span>.<br>
+      All <span class="highlight">day</span>. All night. All funny.<br>
+      Built for <span class="highlight">insomniacs</span>, lunch breaks, and stoners alike.
+    </p>
+    <a href="#drop" class="scroll-btn">↓ See Today’s Drop</a>
+  </div>
+
+  <section class="daily-drop" id="drop">
+    <h2>🎯 Today’s Drop</h2>
+    <p class="quote">{{ quote }}</p>
+    <img src="{{ meme }}" alt="Meme of the Day" class="meme">
+  </section>
+</body>
+</html>
